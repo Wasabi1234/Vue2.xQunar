@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>JavaEdge</title>
+    <!-- 引入Vue -->
+    <script src="./vue.js"></script>
+  </head>
+  <body>
+    <div id="app">{{content}}</div>
+
+    <!-- <div>{{content}}</div> -->
+    <script>
+    	// var dom = document.getElementById('app');
+    	// dom.innerHTML = 'JavaEdge'
+
+    	// setTimeout(function() {
+    	// 	dom.innerHTML = 'bye JavaEdge'
+    	// }, 2000)
+
+    	// 创建Vue 实例
+    	var app = new Vue({
+    		// 接管数据的DOM区域范围
+    		el: '#app',
+    		// 数据内容
+    		data: {
+    			content: 'JavaEdge'
+    		}
+    	})
+    	setTimeout(function() {
+    		app.$data.content = 'bye JavaEdge'
+    	}, 2000)
+    </script>
+  </body>
+</html>
+
+
+
