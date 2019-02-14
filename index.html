@@ -1,36 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="UTF-8">
     <title>JavaEdge</title>
-    <!-- 引入Vue -->
     <script src="./vue.js"></script>
   </head>
   <body>
-    <div id="app">{{content}}</div>
+    <div id="app">
+      <input type="text" v-model="inputValue"/>
+      <button v-on:click="handleBtnClick">提交</button>
+      <ul>
+        <!--<li>第一节的内容</li>-->
+        <!--<li>第二节的内容</li>-->
+        <li v-for="item in list">{{item}}</li>
+      </ul>
+    </div>
 
-    <!-- <div>{{content}}</div> -->
-    <script>
-    	// var dom = document.getElementById('app');
-    	// dom.innerHTML = 'JavaEdge'
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        list: [],
+        inputValue: ''
+      },
+      methods: {
+        handleBtnClick: function () {
+          this.list.push(this.inputValue)
+          this.inputValue = ''
+          // alert(this.inputValue)
+        }
+      }
+    })
+  </script>
 
-    	// setTimeout(function() {
-    	// 	dom.innerHTML = 'bye JavaEdge'
-    	// }, 2000)
-
-    	// 创建Vue 实例
-    	var app = new Vue({
-    		// 接管数据的DOM区域范围
-    		el: '#app',
-    		// 数据内容
-    		data: {
-    			content: 'JavaEdge'
-    		}
-    	})
-    	setTimeout(function() {
-    		app.$data.content = 'bye JavaEdge'
-    	}, 2000)
-    </script>
   </body>
 </html>
 
