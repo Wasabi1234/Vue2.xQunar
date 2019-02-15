@@ -6,22 +6,39 @@
     <script src="./vue.js"></script>
   </head>
   <body>
-    <div id="app">
+    <div id="root">
       <input type="text" v-model="inputValue"/>
       <button v-on:click="handleBtnClick">提交</button>
       <ul>
-        <!--<li>第一节的内容</li>-->
-        <!--<li>第二节的内容</li>-->
-        <li v-for="item in list">{{item}}</li>
+        <!--list 的每项值赋给 item,再将其通过 v-bind 传给组件.-->
+        <todo-item v-bind:content="item"
+                   v-for="item in list">
+        </todo-item>
       </ul>
     </div>
 
   <script>
+
+    // 定义名为 TodoItem 的全局组件
+    // Vue.component("TodoItem", {
+    //   props: ['content'],
+    //   template: "<li>{{content}}</li>"
+    // })
+
+    var TodoItem = {
+      props: ['content'],
+      template: "<li>{{content}}</li>"
+    }
+
     var app = new Vue({
-      el: '#app',
+      el: "#root",
+      // 将 TodoItem 注册到 Vue 实例
+      components: {
+        TodoItem: TodoItem
+      },
       data: {
-        list: [],
-        inputValue: ''
+        totalValue: "",
+        list: []
       },
       methods: {
         handleBtnClick: function () {
