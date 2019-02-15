@@ -1,7 +1,17 @@
 # Vue2.5 零基础开发去哪儿网实战
 > A Vue.js project
 
-## Build Setup
+# 0 联系我
+![](http://upload-images.jianshu.io/upload_images/4685968-6a8b28d2fd95e8b7?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240 "图片标题") 
+1.[Java开发技术交流Q群](https://jq.qq.com/?_wv=1027&k=5UB4P1T)
+
+2.[完整博客链接](http://www.shishusheng.com)
+
+3.[个人知乎](http://www.zhihu.com/people/shi-shu-sheng-)
+
+4.[gayhub](https://github.com/Wasabi1234)
+
+# 1 构建安装,运行
 
 ``` bash
 # install dependencies
@@ -19,8 +29,16 @@ npm run build --report
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-# 无论你是Vue新人还是老手，都能让你收获满满
+# 2 博客教程
+
+## 无论你是Vue新人还是老手，都能让你收获满满
 50%基础知识+50%项目实战，基础与实战完美衔接
+## 2.1  [简介](https://www.jianshu.com/p/089760481e1b)
+本节主要介绍知识大纲，学习前提，讲授方式及预期收获.
+
+## 2.2  [Vue 起步](https://www.jianshu.com/p/a316b5c43e15)
+本章将快速讲解部分 Vue 基础语法，通过 TodoList 功能的编写，在熟悉基础语法的基础上，扩展解析 MVVM 模式及前端组件化的概念及优势.
+
 
 ![](https://upload-images.jianshu.io/upload_images/4685968-81b2ee7c8abd9c40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 # 全面涵盖Vue基础知识点，助你打通技能树任督二脉
